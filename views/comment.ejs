@@ -1,0 +1,52 @@
+<%- include('header') -%><%- include('menu') -%>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-4 lg-3">
+        <div class="container">
+          <div class="row">
+            <div class="col lg-2">
+              <img src="../img/potter.jpg" width="200" height="300" text-align="left" class="img-fluid">
+              <h1></h1>
+            </div>
+            <div class="col lg-2">
+              <h5>Harry Potter</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col lg-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-6 lg-2">
+              <textarea readonly style="resize:none" name="comment" form="usrform" rows="5" cols="50">Kommentek helyei</textarea>
+              <input name="send" id="send" class="btn btn-primary" type="button" value="Módosítás">
+              <input name="send" id="send" class="btn-danger" type="button" value="Törlés">
+              <h1></h1>
+            </div>
+            <div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col lg-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-6 lg-2">
+              <textarea style="overflow:auto;resize:none" name="comment" form="usrform" rows="5" cols="50"></textarea>
+              <input name="send" id="send" class="btn btn-primary" type="button" value="Küldés">
+              <h1></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <%- include('footer') -%>

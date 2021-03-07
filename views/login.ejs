@@ -1,0 +1,31 @@
+<%- include('outsideHeader') -%>
+
+      <div class="container">
+        <div class="card login-card">
+          <div class="row no-gutters">
+            <div class="col-md-5">
+              <img src="img/login_books.jpg"  width="550" height="600" alt="login" class="login-card-img">
+            </div>
+            <div class="col-md-7">
+              <div class="card-body">
+                <p class="login-card-description">Kérjük jelentkezzen be!</p>
+                <form action="#!">
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Felhasználónév</label>
+                      <input type="email" name="email" id="email" class="form-control" placeholder="Felhasználónév">
+                    </div>
+                    <div class="form-group mb-4">
+                      <label for="password" class="form-label">Jelszó</label>
+                      <input type="password" name="password" id="password" class="form-control" placeholder="***********">
+                    </div>
+                    <a href="/">
+                        <input name="login" id="login" class="btn btn-primary" type="button" value="Bejelentkezés">
+                    </a>
+                  </form>
+                  <a href="/forgottenpass" class="forgot-password-link">Elfelejtette jelszavát?</a>
+                  <p class="login-card-footer-text">Még nincs fiókja? <a href="/registration" class="text-reset">Regisztráljon!</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+<%- include('outsideFooter') -%>
