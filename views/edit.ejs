@@ -1,0 +1,23 @@
+<%- include('header') -%>
+
+      <div class="container">
+        <div class="card login-card">
+          <div class="row no-gutters">
+            <div class="col-md-7">
+              <div class="card-body">
+                <form method="POST" >
+                    <div class="mb-3">
+                      <label for="username" class="form-label">Comment</label>
+                      <textarea name="editcomment" id="" msg cols="30" rows="5" class="form-control" style="background-color: black;color:#fff"><%=comment.content%></textarea>
+                      <input type="hidden" id="commentid" name="commentid" value="<%=comment._id%>">
+                      
+                    </div>
+                    <a href="/">
+                        <input name="save" id="save" class="btn btn-primary" type="submit" value="Save">
+                    </a>
+                  </form>
+              </div>
+            </div>
+          </div>
+        </div>
+<%- include('footer') -%>

@@ -5,20 +5,22 @@
             <div class="col-md-5">
               <img src="img/login_books.jpg"  width="550" height="600" alt="login" class="login-card-img">
             </div>
+           
             <div class="col-md-7">
               <div class="card-body">
-                <p class="login-card-description">Kérjen egy új jelszót e-mailen keresztül!</p>
-                <form action="#!">
+                <%- include('error') -%>
+                <%- include('msg') -%>
+                <p class="login-card-description">Please give us your e-mail address!</p>
+                <form method="POST">
                     <div class="mb-3">
-                      <label for="email" class="form-label">E-mail cím</label>
+                      <label for="email" class="form-label">E-mail address</label>
                       <input type="email" name="email" id="email" class="form-control" placeholder="pelda@email.hu">
                     </div>
-                    <input name="login" id="login" class="btn btn-primary" type="button" value="Küldés">
-                  </form>
-                  <a href="/login" class="btn btn-primary">Vissza a bejelentkezéshez</a>
+                    <input name="send" id="send" class="btn btn-primary" type="submit" value="Send">
+                    <a href="/login" class="btn btn-primary">Back to login</a>
+                  </form>                  
               </div>
             </div>
           </div>
         </div>
-
 <%- include('outsideFooter') -%>

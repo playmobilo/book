@@ -1,15 +1,16 @@
 <%- include('header') -%><%- include('menu') -%>
+<% book.forEach(function(item) { %>
 <div class="container">
   <div class="row">
     <div class="col-4 lg-3">
       <div class="container">
         <div class="row">
           <div class="col lg-2">
-            <a href="/book/bookid">
+            <a href="/books/page/<%= item._id %>">
               <img
-                src="img/potter.jpg"
-                width="100"
-                height="150"
+                src=<%=item.pic_path%>
+                width="200"
+                height="300"
                 text-align:
                 left
                 class="img-fluid"
@@ -18,35 +19,13 @@
             <h1></h1>
           </div>
           <div class="col lg-2">
-            <h5>Harry Potter</h5>
+            <h5><%=item.title%></h5>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-4 lg-3">
-      <div class="container">
-        <div class="row">
-          <div class="col lg-2">
-            <a href="/book/bookid">
-              <img
-                src="img/gyuruk.jpg"
-                width="100"
-                height="150"
-                text-align:
-                left;
-                class="img-fluid"
-              />
-            </a>
-            <h1></h1>
-          </div>
-          <div class="col lg-2">
-            <h5>Lord of the rings</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+ <%});%>
+
 <%- include('footer') -%>

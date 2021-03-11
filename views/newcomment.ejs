@@ -58,33 +58,31 @@
         <div class="container">
           <div class="row">
             <div class="col lg-2">
-              <img src="../<%=book.pic_path%>" width="200" height="300" text-align="left" class="img-fluid">
+              <img src="<%=book.pic_path%>" width="200" height="300" text-align="left" class="img-fluid">
               <h1></h1>
             </div>
             <div class="col lg-2">
               <h5><%=book.title%></h5>
+              <h1>neeeeewcomment</h1>
             </div>
           </div>
         </div>
       </div>
     </div>
-<% if (typeof comments !== 'undefined'){ %>
+
     <section>
       <div class="container">
         <h1>Comments</h1>
         <% comments.forEach(function(item) { %>
           <div class="row">
               <div class="col-sm-5 col-md-6 col-12 pb-4">
-                  <div class="comment mt-4 text-justify float-left"> <div><b> author: <%= item.author %> </b></div>
+                  <div class="comment mt-4 text-justify float-left"> <img src="https://i.imgur.com/yTFUilP.jpg" alt="" class="rounded-circle" width="40" height="40">
                     <%= item.content %>
-                    <% if(item.author === myusername) { %><a href="/books/<%=book._id%>/edit/<%=item._id%>"><button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit">Edit<i class="fa fa-edit"></i></button></a>
-                      <a href="/books/<%=book._id%>/delete/<%= item._id%>"><button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit">Delete<i class="fa fa-edit"></i></button></a> <% } %>
                   </div>
               </div>
               <%});%>
-              <% } %>
               <div class="col-lg-4 col-md-5 col-sm-4 offset-md-1 offset-sm-1 col-12 mt-4">
-                  <form id="algin-form" method="POST" action="/books/newcomment/<%=book._id%>">
+                  <form id="algin-form" method="POST" action="/book/<%=book._id%>/newcomment">
                     <input type="hidden" name="book" value="<%=book%>">
                       <div class="form-group">
                           <h4>Leave a comment</h4> <label for="message">Message</label> <textarea name="comment" id="" msg cols="30" rows="5" class="form-control" style="background-color: black;color:#fff"></textarea>
