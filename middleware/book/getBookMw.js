@@ -9,11 +9,9 @@ module.exports = function (objectrepository) {
 
     return function (req, res, next) {
       console.log("GetBookMW")
-      bookModel.find({
-  
-      }).populate().exec(function (err, results) {
+      bookModel.find({},function (err, results) {
         if (err) {
-          return next(new Error('Error getting books'));
+          return next(err);
         }
   
         res.locals.book = results;

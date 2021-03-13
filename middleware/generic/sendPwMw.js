@@ -6,7 +6,7 @@ module.exports = function (objectrepository) {
 
     return function (req, res, next) {
       if (req.body.email === ''){
-        res.locals.error = "Please add a valid e-mail address!"
+        res.locals.error = "Please add a valid e-mail address!";
         return next();
       }
       if(req.body.send === 'Send'){
